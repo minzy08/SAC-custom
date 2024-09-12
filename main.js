@@ -17,6 +17,26 @@ this._shadowRoot.appenChild(template.content.cloneNode(true))
 
 this._root = this._shadowRoot.getElementById('root')
 }
+
+  onCustomWidgetResize(width, height){
+    this.render()
+  }
+   onCustomWidgetAfterUpdate(changedProps){
+    this.render()
+  }
+   onCustomWidgetDestory(){
 }
+
+async render () {
+        console.log('test')
+        const dataBinding = this.dataBinding
+        if (!dataBinding || dataBinding.state !== 'success') {
+           return
+         }
+         this._root.textContent = JSON.stringify(dataBinding)
+      }
+  }
+
+
 customElements.define('com-sap-sac-exercise-pmj-main', Main)
 })()
