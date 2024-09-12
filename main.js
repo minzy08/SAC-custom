@@ -13,7 +13,7 @@ class Main extends HTMLElement {
   super()  
 
 this._shadowRoot = this.attachShadow({ mode : 'open'})
-this._shadowRoot.appenChild(template.content.cloneNode(true))
+this._shadowRoot.appendChild(template.content.cloneNode(true))
 
 this._root = this._shadowRoot.getElementById('root')
 }
@@ -27,16 +27,13 @@ this._root = this._shadowRoot.getElementById('root')
    onCustomWidgetDestory(){
 }
 
-async render () {
-        console.log('test')
-        const dataBinding = this.dataBinding
-        if (!dataBinding || dataBinding.state !== 'success') {
-           return
-         }
-         this._root.textContent = JSON.stringify(dataBinding)
-      }
-  }
-
-
+  async render() {
+    const dataBinding = this.dataBinding
+    if(!dataBinding || dataBinding.state !== 'success') {
+      return
+    }
+    this._root.textContent = JSON.stringify(dataBinding)
+}
+}
 customElements.define('com-sap-sac-exercise-pmj-main', Main)
 })()
