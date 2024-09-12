@@ -1,0 +1,32 @@
+{
+ "eula": "",
+ "vendor": "Dfocus_pmj",
+ "license": "",
+ "id": "sap.custom.pmj0912",
+ "version": "1.0.0",
+ "name": "Custom Widget Exercise-01 pmj",
+ "icon": "",
+ "newInstancePrefix": "ExerciseCustomWidget",
+ "description": "커스텀 위젯 텍스트",
+ "webcomponents": [
+ {
+ "kind": "main",
+ "tag": "com-sap-sac-exercise-pmj-main",
+ "url": "/main.js",
+ "integrity": "",
+ "ignoreIntegrity": true
+ }
+ ],
+ "properties": {
+ "width": {
+ "type": "integer",
+ "default": 400
+ },
+ "height": {
+ "type": "integer",
+ "default": 320
+ }
+ },
+ "methods":{},
+ "events":{}
+}
