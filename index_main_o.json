@@ -3,7 +3,7 @@
  "vendor": "Dfocus_pmj",
  "license": "",
  "id": "sap.custom.pmj0912",
- "version": "1.0.0",
+ "version": "1.0.1",
  "name": "Custom Widget Exercise-01 pmj",
  "icon": "",
  "newInstancePrefix": "ExerciseCustomWidget",
@@ -28,5 +28,21 @@
  }
  },
  "methods":{},
- "events":{}
+ "events":{},
+ "dataBindings" : {
+  "dataBinding" : {
+  "feeds" : [
+   {
+    "id " : "dimensions",
+    "description : "Dimensions",
+    "type" : "dimension"
+   }, 
+   {
+    "id" : "measures",
+    "description : "Measures",
+    "type" : "mainStructureMember"
+ }
+  ]
+ }
+}
 }
